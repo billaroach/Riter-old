@@ -1,0 +1,820 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>HW4</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="fonts/Futura New/stylesheet.css">
+    <link rel="stylesheet" href="fonts/Gotham Pro/stylesheet.css">
+
+
+</head>
+
+<body onload="showCoordinates()">
+
+    <header>
+        <div class="header-topbar">
+            <div class="header-nav">
+                <div class="text-item">
+                    <span>О КОМПАНИИ</span>
+                </div>
+                <div class="text-item">
+                    <span>КОНТАКТЫ</span>
+                </div>
+                <div class="text-item">
+                    <span>СОТРУДНИЧЕСТВО</span>
+                </div>
+                <div class="text-item">
+                    <span>ДОСТАВКА</span>
+                </div>
+                <div class="text-item">
+                    <span>ОПЛАТА И ВОЗВРАТ</span>
+                </div>
+            </div>
+            <div class="header-menu">
+                <div class="text-item">
+                    <span>МЕНЮ</span>
+                </div>
+                <div class="menu-button">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="header-midbar">
+            <div class="midbar-leftside">
+                <div class="leftside-item">
+                    <div class="icon">
+                        <object type="image/svg+xml" data="icons/phone-icon.svg" id=’object’ class=’phone-icon’></object>
+                    </div>
+                    <div class="text-item">
+                        <span class="upper-text" id="city">
+                        ВАШ ГОРОД: МОСКВА
+                    </span>
+                        <span class="lower-text" id="phone-number">
+                        8 800 200 06-00
+                    </span>
+                    </div>
+                </div>
+                <div class="leftside-item">
+                    <div class="icon">
+                        <object type="image/svg+xml" data="icons/mail-icon.svg" id=’object’ class=’phone-icon’></object>
+                    </div>
+                    <div class="text-item">
+                        <span class="upper-text">
+                        Напишите нам
+                    </span>
+                        <span class="lower-text">
+                        hello@riter.ru
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="midbar-logo">
+                <object type="image/svg+xml" data="icons/dark_logo_transparent_background.svg" id=’object’ class=’logo’></object>
+            </div>
+            <div class="midbar-rightside">
+                <div class="rightside-item">
+                    <div class="icon">
+                        <object type="image/svg+xml" data="icons/person-icon.svg" id=’object’ class=’icon’></object>
+                    </div>
+                    <div class="text-item">
+                        <span class="upper-text">
+                        Личный кабинет
+                    </span>
+                        <span class="lower-text">
+                        Вход/регистрация
+                    </span>
+                    </div>
+                </div>
+                <div class="rightside-item">
+                    <div class="icon">
+                        <object type="image/svg+xml" data="icons/shopping-cart.svg" id=’object’ class=’icon’></object>
+                    </div>
+                    <div class="text-item">
+                        <span class="upper-text">
+                        Товаров на сумму
+                    </span>
+                        <span class="lower-text">
+                        320 000 Р
+                    </span>
+                    </div>
+                    <object type="image/svg+xml" data="icons/tooltip.svg" id=’object’ class="cart-tooltip"></object>
+                </div>
+
+            </div>
+        </div>
+        <div class="header-botbar">
+            <div class="botbar-container">
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/armchair.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    КРЕСЛА
+                </span>
+                </div>
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/lamp.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    СВЕТИЛЬНИКИ
+                </span>
+                </div>
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/sofa.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    ДИВАНЫ
+                </span>
+                </div>
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/table.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    СТОЛЫ
+                </span>
+                </div>
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/chair.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    СТУЛЬЯ
+                </span>
+                </div>
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/pouf.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    ПУФЫ
+                </span>
+                </div>
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/decor.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    ДЕКОР
+                </span>
+                </div>
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/bench.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    СВЕТИЛЬНИКИ
+                </span>
+                </div>
+                <div class="botbar-item">
+                    <object type="image/svg+xml" data="icons/more.svg" id=’object’ class="botbar-icon"></object>
+                    <span class="botbar-text">
+                    ЕЩЕ
+                </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="slider-bar">
+            <div class="slider-bar-left">
+                <span class="head1">
+                ОФИСНАЯ<br>МЕБЕЛЬ
+            </span>
+                <span class="head2">
+                Новый каталог 2018-2019
+            </span>
+                <button type="button" class="btn btn-primary">
+                ПОДРОБНЕЕ О КАТАЛОГЕ
+            </button>
+                <div onclick="autoSlideStop()" class="slider-dots">
+                    <div class="slider-dots_item" onclick="currentSlide(1)"></div>
+                    <div class="slider-dots_item" onclick="currentSlide(2)"></div>
+                    <div class="slider-dots_item" onclick="currentSlide(3)"></div>
+                    <div class="slider-dots_item" onclick="currentSlide(4)"></div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="item">
+                    <img src="img/chair/slide1.png" alt="Первый слайд">
+                </div>
+                <div class="item">
+                    <img src="img/chair/slide2.png" alt="Второй слайд">
+                </div>
+                <div class="item">
+                    <img src="img/chair/slide3.png" alt="Третий слайд">
+                </div>
+                <div class="item">
+                    <img src="img/chair/slide4.png" alt="Четвертый слайд">
+                </div>
+
+                <!-- <a class="prev" onclick="minusSlide()">&#10094;</a>
+                <a class="next" onclick="plusSlide()">&#10095;</a> -->
+
+            </div>
+            <br>
+        </div>
+        <div class="pros-bar">
+            <div class="container">
+                <div class="row myrow">
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/pros-icons/plane-icon.svg" id=’object’ class="pros-icon"></object>
+                        <span class="pros-brief">БЫСТРАЯ&nbsp;ДОСТАВКА</span>
+                        <p class="pros-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/pros-icons/armchair-icon.svg" id=’object’ class="pros-icon"></object>
+                        <span class="pros-brief">30 ТЫС.+&nbsp;МОДЕЛЕЙ</span>
+                        <p class="pros-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/pros-icons/diamond-icon.svg" id=’object’ class="pros-icon"></object>
+                        <span class="pros-brief">ТОЛЬКО&nbsp;ОРИГИНАЛЫ</span>
+                        <p class="pros-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/pros-icons/discount-icon.svg" id=’object’ class="pros-icon"></object>
+                        <span class="pros-brief">110%&nbsp;НИЗКИЕ&nbsp;ЦЕНЫ</span>
+                        <p class="pros-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="furniture-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/furniture-list/available.svg" id=’object’ class="available-status"></object>
+                        <div class="furniture-image">
+                            <object type="image/svg+xml" data="icons/furniture-list/chair-item.svg" id=’object’ class="fur-image"></object>
+                        </div>
+                        <div class="furniture-name">
+                            <span class="fur-name-text">
+                              СТУЛ ТАКОЙ-ТО<br>МАРКИ<br>
+                          </span>
+                            <object type="image/svg+xml" data="icons/furniture-list/blue-fav-icon.svg" id=’object’ class="fur-name-fav-icon"></object>
+                        </div>
+                        <div class="furniture-manufacturer-info">
+                            <span class="mnf-text">Арт. 42342347</span>
+                            <span class="mnf-text">Производитель: <span class="mnf-text-firm">KOLBINS</span></span>
+                        </div>
+                        <div class="furniture-price">
+                            <span class="price-current">
+                              152 810 ₽
+                          </span>
+                            <span class="price-default">
+                              432 810 ₽
+                          </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/furniture-list/available.svg" id=’object’ class="available-status"></object>
+                        <div class="furniture-image">
+                            <object type="image/svg+xml" data="icons/furniture-list/chair-item.svg" id=’object’ class="fur-image"></object>
+                        </div>
+                        <div class="furniture-name">
+                            <span class="fur-name-text">
+                            СТУЛ ТАКОЙ-ТО<br>МАРКИ<br>
+                        </span>
+                            <object type="image/svg+xml" data="icons/furniture-list/blue-fav-icon.svg" id=’object’ class="fur-name-fav-icon"></object>
+                        </div>
+                        <div class="furniture-manufacturer-info">
+                            <span class="mnf-text">Арт. 42342347</span>
+                            <span class="mnf-text">Производитель: <span class="mnf-text-firm">KOLBINS</span></span>
+                        </div>
+                        <div class="furniture-price">
+                            <span class="price-current">
+                            152 810 ₽
+                        </span>
+                            <span class="price-default">
+                            432 810 ₽
+                        </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/furniture-list/available.svg" id=’object’ class="available-status"></object>
+                        <div class="furniture-image">
+                            <object type="image/svg+xml" data="icons/furniture-list/chair-item.svg" id=’object’ class="fur-image"></object>
+                        </div>
+                        <div class="furniture-name">
+                            <span class="fur-name-text">
+                            СТУЛ ТАКОЙ-ТО<br>МАРКИ<br>
+                        </span>
+                            <object type="image/svg+xml" data="icons/furniture-list/blue-fav-icon.svg" id=’object’ class="fur-name-fav-icon"></object>
+                        </div>
+                        <div class="furniture-manufacturer-info">
+                            <span class="mnf-text">Арт. 42342347</span>
+                            <span class="mnf-text">Производитель: <span class="mnf-text-firm">KOLBINS</span></span>
+                        </div>
+                        <div class="furniture-price">
+                            <span class="price-current">
+                            152 810 ₽
+                        </span>
+                            <span class="price-default">
+                            432 810 ₽
+                        </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/furniture-list/available.svg" id=’object’ class="available-status"></object>
+                        <div class="furniture-image">
+                            <object type="image/svg+xml" data="icons/furniture-list/chair-item.svg" id=’object’ class="fur-image"></object>
+                        </div>
+                        <div class="furniture-name">
+                            <span class="fur-name-text">
+                            СТУЛ ТАКОЙ-ТО<br>МАРКИ<br>
+                        </span>
+                            <object type="image/svg+xml" data="icons/furniture-list/blue-fav-icon.svg" id=’object’ class="fur-name-fav-icon"></object>
+                        </div>
+                        <div class="furniture-manufacturer-info">
+                            <span class="mnf-text">Арт. 42342347</span>
+                            <span class="mnf-text">Производитель: <span class="mnf-text-firm">KOLBINS</span></span>
+                        </div>
+                        <div class="furniture-price">
+                            <span class="price-current">
+                            152 810 ₽
+                        </span>
+                            <span class="price-default">
+                            432 810 ₽
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row2">
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/furniture-list/available.svg" id=’object’ class="available-status"></object>
+                        <div class="furniture-image">
+                            <object type="image/svg+xml" data="icons/furniture-list/chair-item.svg" id=’object’ class="fur-image"></object>
+                        </div>
+                        <div class="furniture-name">
+                            <span class="fur-name-text">
+                          СТУЛ ТАКОЙ-ТО<br>МАРКИ<br>
+                      </span>
+                            <object type="image/svg+xml" data="icons/furniture-list/blue-fav-icon.svg" id=’object’ class="fur-name-fav-icon"></object>
+                        </div>
+                        <div class="furniture-manufacturer-info">
+                            <span class="mnf-text">Арт. 42342347</span>
+                            <span class="mnf-text">Производитель: <span class="mnf-text-firm">KOLBINS</span></span>
+                        </div>
+                        <div class="furniture-price">
+                            <span class="price-current">
+                          152 810 ₽
+                      </span>
+                            <span class="price-default">
+                          432 810 ₽
+                      </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/furniture-list/available.svg" id=’object’ class="available-status"></object>
+                        <div class="furniture-image">
+                            <object type="image/svg+xml" data="icons/furniture-list/chair-item.svg" id=’object’ class="fur-image"></object>
+                        </div>
+                        <div class="furniture-name">
+                            <span class="fur-name-text">
+                        СТУЛ ТАКОЙ-ТО<br>МАРКИ<br>
+                    </span>
+                            <object type="image/svg+xml" data="icons/furniture-list/blue-fav-icon.svg" id=’object’ class="fur-name-fav-icon"></object>
+                        </div>
+                        <div class="furniture-manufacturer-info">
+                            <span class="mnf-text">Арт. 42342347</span>
+                            <span class="mnf-text">Производитель: <span class="mnf-text-firm">KOLBINS</span></span>
+                        </div>
+                        <div class="furniture-price">
+                            <span class="price-current">
+                        152 810 ₽
+                    </span>
+                            <span class="price-default">
+                        432 810 ₽
+                    </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/furniture-list/available.svg" id=’object’ class="available-status"></object>
+                        <div class="furniture-image">
+                            <object type="image/svg+xml" data="icons/furniture-list/chair-item.svg" id=’object’ class="fur-image"></object>
+                        </div>
+                        <div class="furniture-name">
+                            <span class="fur-name-text">
+                        СТУЛ ТАКОЙ-ТО<br>МАРКИ<br>
+                    </span>
+                            <object type="image/svg+xml" data="icons/furniture-list/blue-fav-icon.svg" id=’object’ class="fur-name-fav-icon"></object>
+                        </div>
+                        <div class="furniture-manufacturer-info">
+                            <span class="mnf-text">Арт. 42342347</span>
+                            <span class="mnf-text">Производитель: <span class="mnf-text-firm">KOLBINS</span></span>
+                        </div>
+                        <div class="furniture-price">
+                            <span class="price-current">
+                        152 810 ₽
+                    </span>
+                            <span class="price-default">
+                        432 810 ₽
+                    </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <object type="image/svg+xml" data="icons/furniture-list/available.svg" id=’object’ class="available-status"></object>
+                        <div class="furniture-image">
+                            <object type="image/svg+xml" data="icons/furniture-list/chair-item.svg" id=’object’ class="fur-image"></object>
+                        </div>
+                        <div class="furniture-name">
+                            <span class="fur-name-text">
+                        СТУЛ ТАКОЙ-ТО<br>МАРКИ<br>
+                    </span>
+                            <object type="image/svg+xml" data="icons/furniture-list/blue-fav-icon.svg" id=’object’ class="fur-name-fav-icon"></object>
+                        </div>
+                        <div class="furniture-manufacturer-info">
+                            <span class="mnf-text">Арт. 42342347</span>
+                            <span class="mnf-text">Производитель: <span class="mnf-text-firm">KOLBINS</span></span>
+                        </div>
+                        <div class="furniture-price">
+                            <span class="price-current">
+                        152 810 ₽
+                    </span>
+                            <span class="price-default">
+                        432 810 ₽
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="large-categories-bar">
+            <div class="container">
+                <div class="row large-categories-row1">
+                    <div class="col-sm-6 col-sm-6-grey">
+                        <span class="head1">
+                        Стулья, Кресла,<br>Диваны
+                    </span>
+                        <span class="head2">
+                        Авторский дизайн, большой ассортимент и многообразие цветовой гаммы в сочетании с отличным качеством.
+                    </span>
+                        <button class="btn btn-primary">Подробнее</button>
+                        <object type="image/svg+xml" data="icons/large-categories/large-categories-chair.svg" id=’object’ class="large-categories-chair"></object>
+                    </div>
+                    <div class="col-sm-6 col-sm-6-white">
+                        <span class="head1">
+                        Стулья, Кресла,<br>Диваны
+                    </span>
+                        <span class="head2">
+                        Авторский дизайн, большой ассортимент и многообразие цветовой гаммы в сочетании с отличным качеством.
+                    </span>
+                        <button class="btn btn-primary">Подробнее</button>
+                        <object type="image/svg+xml" data="icons/large-categories/large-categories-chair.svg" id=’object’ class="large-categories-chair"></object>
+                    </div>
+                </div>
+                <div class="row large-categories-row2">
+                    <div class="col-sm-6 col-sm-6-white">
+                        <span class="head1">
+                      Стулья, Кресла,<br>Диваны
+                  </span>
+                        <span class="head2">
+                      Авторский дизайн, большой ассортимент и многообразие цветовой гаммы в сочетании с отличным качеством.
+                  </span>
+                        <button class="btn btn-primary">Подробнее</button>
+                        <object type="image/svg+xml" data="icons/large-categories/large-categories-chair.svg" id=’object’ class="large-categories-chair"></object>
+                    </div>
+                    <div class="col-sm-6 col-sm-6-grey">
+                        <span class="head1">
+                        Стулья, Кресла,<br>Диваны
+                    </span>
+                        <span class="head2">
+                        Авторский дизайн, большой ассортимент и многообразие цветовой гаммы в сочетании с отличным качеством.
+                    </span>
+                        <button class="btn btn-primary">Подробнее</button>
+                        <object type="image/svg+xml" data="icons/large-categories/large-categories-chair.svg" id=’object’ class="large-categories-chair"></object>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="company-info-bar">
+            <object type="image/svg+xml" data="icons/company-info/Ellipse.svg" id=’object’ class="company-info"></object>
+            <span class="head1">О компании riter</span>
+            <span class="head2">Дизайнерская мебель в<br>интернет магазине Ритер</span>
+            <div class="company-info-text">
+                <div class="company-info-left">
+                    <div class="top-part">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    </div>
+                    <div class="inner-head">
+                        Заголовок со смыслом и<br>значением
+                    </div>
+                    <div class="bot-part">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+                <div class="company-info-right">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                </div>
+            </div>
+        </div>
+        <div class="brands-bar">
+            <object type="image/svg+xml" data="icons/brands/brands-right-ellipse.svg" id=’object’ class="brands-right-ellipse"></object>
+            <object type="image/svg+xml" data="icons/brands/brands-left-ellipse.svg" id=’object’ class="brands-left-ellipse"></object>
+            <div class="head1">
+                наши бренды
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                    </div>
+                    <div class="col-sm-2">
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                    </div>
+                    <div class="col-sm-2">
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                    </div>
+                    <div class="col-sm-2">
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                    </div>
+                    <div class="col-sm-2">
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                    </div>
+                    <div class="col-sm-2">
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                        <object type="image/svg+xml" data="icons/brands/hooker-logo.svg" id=’object’ class="brand-logo"></object>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comments-bar">
+            <div class="top-part">
+                <div class="headers">
+                    <div class="head1">
+                        Дизайнеры<br>интерьера о нас.
+                    </div>
+                    <div class="head2">
+                        Чем мы можем быть полезны дизайнерам
+                    </div>
+                    <object type="image/svg+xml" data="icons/comments-bar/comments-head2-arrow.svg" id=’object’ class="head2-arrow"></object>
+                </div>
+                <div class="arrows">
+                    <object type="image/svg+xml" data="icons/comments-bar/transparent-arrow-left.svg" id=’object’ class="transparent-arrow-left"></object>
+                    <object type="image/svg+xml" data="icons/comments-bar/arrow-right.svg" id=’object’ class="arrow-right"></object>
+                </div>
+            </div>
+            <div class="bot-part">
+                <div class="comment-block">
+                    <div class="comment-block-person">
+                        <object type="image/svg+xml" data="icons/comments-bar/person-photo.svg" id=’object’ class="person-photo"></object>
+                        <div class="person-info">
+                            <div class="name">Елена Малышева</div>
+                            <div class="post">Архитектор, дизайнер, выпускник Ba<br>London | Москва</div>
+                            <div class="website">www.website.ru</div>
+                        </div>
+                    </div>
+                    <div class="comment-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    </div>
+                </div>
+                <div class="comment-block comment-block-transparent">
+                    <div class="comment-block-person">
+                        <object type="image/svg+xml" data="icons/comments-bar/person-photo.svg" id=’object’ class="person-photo"></object>
+                        <div class="person-info">
+                            <div class="name">Елена Малышева</div>
+                            <div class="post">Архитектор, дизайнер, выпускник Ba<br>London | Москва</div>
+                            <div class="website">www.website.ru</div>
+                        </div>
+                    </div>
+                    <div class="comment-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="subscribe-bar">
+            <div class="sub-block">
+                <div class="text">
+                    <div class="upper-text">подпишись на тег</div>
+                    <div class="lower-text">#riter</div>
+                </div>
+                <button class="btn btn-primary">подписаться</button>
+            </div>
+        </div>
+        <div class="design-blog-bar">
+            <div class="blog-header">
+                <div class="text">
+                    <h3>Блог про<br>дизайнерскую мебель</h3>
+                </div>
+                <div class="arrow-text">
+                    <h5>Все новости</h5>
+                </div>
+                <object type="image/svg+xml" data="icons/blog-bar/Arrow.svg" id=’object’ class="arrow-button"></object>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <object type="image/svg+xml" data="icons/blog-bar/blog-pic.svg" id=’object’ class="blog-pic"></object>
+                        <div class="article-info">
+                            <div class="article-date">12/08/18</div>
+                            <div class="article-name">Название статьи</div>
+                            <div class="article-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</div>
+                        </div>
+                        <div class="article-button">
+                            <div class="article-button-text">читать далее</div>
+                            <object type="image/svg+xml" data="icons/blog-bar/Arrow.svg" id=’object’ class="arrow-button"></object>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <object type="image/svg+xml" data="icons/blog-bar/blog-pic.svg" id=’object’ class="blog-pic"></object>
+                        <div class="article-info">
+                            <div class="article-date">12/08/18</div>
+                            <div class="article-name">Название статьи</div>
+                            <div class="article-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</div>
+                        </div>
+                        <div class="article-button">
+                            <div class="article-button-text">читать далее</div>
+                            <object type="image/svg+xml" data="icons/blog-bar/Arrow.svg" id=’object’ class="arrow-button"></object>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <object type="image/svg+xml" data="icons/blog-bar/blog-pic.svg" id=’object’ class="blog-pic"></object>
+                        <div class="article-info">
+                            <div class="article-date">12/08/18</div>
+                            <div class="article-name">Название статьи</div>
+                            <div class="article-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</div>
+                        </div>
+                        <div class="article-button">
+                            <div class="article-button-text">читать далее</div>
+                            <object type="image/svg+xml" data="icons/blog-bar/Arrow.svg" id=’object’ class="arrow-button"></object>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container container1">
+                <div class="row row1">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left header-text-left">МЕБЕЛЬ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left header-text-left">СВЕТ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left header-text-left">ДЕКОР</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left header-text-left">КОМПАНИЯ</p>
+                    </div>
+                    <div class="col-sm-3 padding-last">
+                        <p class="text-right header-text-right">ПОДПИШИТЕСЬ</p>
+                    </div>
+                </div>
+
+                <div class="row row2">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ДИВАНЫ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ЛЮСТРЫ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ЗЕРКАЛА</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">О КОМПАНИИ</p>
+                    </div>
+                </div>
+
+                <div class="row row3">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">КРОВАТИ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">БРА</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">СТАТУЭТКИ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ШОУРУМЫ</p>
+                    </div>
+                    <div class="col-sm-3 padding-last">
+                        <p class="text-left small-text">example@email.ru</p>
+                    </div>
+                    <div class="col-sm-1 padding-0">
+                        <div class="check-icon"></div>
+                    </div>
+                </div>
+                <div class="row row4">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">КРОВАТИ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ТОРШЕРЫ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">КАРТИНЫ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ДОСТАВКА И ОПЛАТА</p>
+                    </div>
+                    <div class="col-sm-3 padding-last">
+                        <div class="mail-field-line">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row5">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">КРЕСЛА</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ЛАМПЫ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">КОВРЫ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ОПЛАТА</p>
+                    </div>
+                </div>
+
+                <div class="row row6">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">КОНСОЛИ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ПОДСВЕТКА КАРТИН</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text"></p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ДИЗАЙНЕРАМ И ПАРТНЕРАМ</p>
+                    </div>
+                    <div class="col-sm-1 padding-0">
+                        <div class="instagram-icon"></div>
+                    </div>
+                    <div class="col-sm-1 padding-0">
+                        <div class="facebook-icon"></div>
+                    </div>
+                </div>
+                <div class="row row7">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left header-text-left">НОВОСТИ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left header-text-left">ДРУГОЕ</p>
+                    </div>
+                </div>
+                <div class="row row8">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">НОВОСТИ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ДРУГОЙ РАЗДЕЛ</p>
+                    </div>
+                </div>
+                <div class="row row9">
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">БЛОГ</p>
+                    </div>
+                    <div class="col-sm-2 padding-0">
+                        <p class="text-left small-text">ЕЩЕ КАКОЙ-ТО РАЗДЕЛ</p>
+                    </div>
+                </div>
+                <div class="row row10">
+                    <div class="col-sm-10">
+                        <p class="text-left lowest-small-text">© Riter. Все права защищены.</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <p class="text-left lowest-small-text">Политика&nbsp;конфиденциальности</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="geo.js"></script>
+    <script src="slider.js"></script>
+    <script type="text/javascript">
+        autoSlide()
+    </script>
+</body>
+
+</html>
